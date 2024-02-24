@@ -12,16 +12,18 @@ navigator.geolocation.getCurrentPosition(position => {
       .then(data => {
         console.log(data);
         if (data && data.features && data.features.length > 0) {
+          console.log(data);
             const locationInfo = data.features[0].properties;
             const timezone = locationInfo.timezone.name;
             const latitude = locationInfo.lat;
             const longitude = locationInfo.lon;
-            const offsetSTD = locationInfo.timezone.offset_std;
-            const offsetSTDSeconds = locationInfo.timezone.offset_std_seconds;
-            const offsetDST = locationInfo.timezone.offset_dst;
-            const offsetDSTSeconds = locationInfo.timezone.offset_dst_seconds;
+            const offsetSTD = locationInfo.timezone.offset_STD;
+            const offsetSTDSeconds = locationInfo.timezone.offset_STD_seconds;
+            const offsetDST = locationInfo.timezone.offset_DST;
+            const offsetDSTSeconds = locationInfo.timezone.offset_DST_seconds;
             const country = locationInfo.country;
             const postcode = locationInfo.postcode;
+            
             const city = locationInfo.city;
 
          
@@ -76,10 +78,10 @@ function getLocationInformation() {
                 const timezone = locationInfo.timezone.name;
                 const latitude = locationInfo.lat;
                 const longitude = locationInfo.lon;
-                const offsetSTD = locationInfo.timezone.offset_std;
-                const offsetSTDSeconds = locationInfo.timezone.offset_std_seconds;
-                const offsetDST = locationInfo.timezone.offset_dst;
-                const offsetDSTSeconds = locationInfo.timezone.offset_dst_seconds;
+                const offsetSTD = locationInfo.timezone.offset_STD;
+                const offsetSTDSeconds = locationInfo.timezone.offset_STD_seconds;
+                const offsetDST = locationInfo.timezone.offset_DST;
+                const offsetDSTSeconds = locationInfo.timezone.offset_DST_seconds;
                 const country = locationInfo.country;
                 const postcode = locationInfo.postcode;
                 const city = locationInfo.city;
