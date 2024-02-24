@@ -24,7 +24,7 @@ navigator.geolocation.getCurrentPosition(position => {
             const country = locationInfo.country;
             const postcode = locationInfo.postcode;
             
-            const city = locationInfo.city;
+            const city = locationInfo.state;
 
          
             document.getElementById('Current-time').innerHTML = `
@@ -84,7 +84,7 @@ function getLocationInformation() {
                 const offsetDSTSeconds = locationInfo.timezone.offset_DST_seconds;
                 const country = locationInfo.country;
                 const postcode = locationInfo.postcode;
-                const city = locationInfo.city;
+                const city = locationInfo.state;
 
                 // Update the DOM with location information
                 document.getElementById('result').innerHTML = `
